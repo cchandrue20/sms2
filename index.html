@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Registration & Result Management</title>
+
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #ffffff;
+      font-size: large;
+      ;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      width: 400px;
+      background-color: white;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 8px;
+      width: 100%;
+      background-color: #a06307;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ad4eb9;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Student Registration</h2>
+  <form action="/registerStudent" method="post">
+    <label>Name</label>
+    <input type="text" name="name">
+
+    <label>ID</label>
+    <input type="text" name="id">
+
+    <label>Password</label>
+    <input type="password" name="password">
+
+    <label>Class</label>
+    <input type="text" name="class">
+
+    <label>Address</label>
+    <input type="text" name="address">
+
+    <label>Gender</label>
+    <input type="text" name="gender">
+
+    <label>Mail ID</label>
+    <input type="email" name="mailid">
+
+    <button type="submit">Register Student</button>
+  </form>
+</div>
+
+<div class="container">
+  <h2>Course Management (Faculty)</h2>
+  <form action="/addCourse" method="post">
+    <label>Course ID</label>
+    <input type="text" name="courseId">
+
+    <label>Course Name</label>
+    <input type="text" name="courseName">
+
+    <button type="submit">Add Course</button>
+  </form>
+</div>
+
+<div class="container">
+  <h2>Add Marks & Calculate Total</h2>
+  <form action="/addMarks" method="post">
+    <label>Student ID</label>
+    <input type="text" name="studentId">
+
+    <label>Course CS23401 Marks</label>
+    <input type="number" name="CS23401">
+
+    <label>Course CS23402 Marks</label>
+    <input type="number" name="CS23402">
+
+    <label>Course CS23403 Marks</label>
+    <input type="number" name="CS23403">
+
+    <button type="submit">Calculate Total</button>
+  </form>
+</div>
+
+<div class="container">
+  <h2>Update Course Name</h2>
+  <form action="/updateCourse" method="post">
+    <label>Course ID</label>
+    <input type="text" name="courseId">
+
+    <label>New Course Name</label>
+    <input type="text" name="newName">
+
+    <button type="submit">Update Course</button>
+  </form>
+</div>
+
+<div class="container">
+  <h2>Delete Course</h2>
+  <form action="/deleteCourse" method="post">
+    <label>Course ID</label>
+    <input type="text" name="courseId">
+
+    <button type="submit">Delete Course</button>
+  </form>
+</div>
+
+<div class="container">
+  <h2>View All Students</h2>
+  <a href="/studentsTable" target="_blank">
+    <button>View Student Table</button>
+  </a>
+</div>
+
+</body>
+</html>
